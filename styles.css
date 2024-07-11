@@ -5,7 +5,7 @@ body {
 
 .hero {
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('efzo.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-background-image.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -111,3 +111,9 @@ section {
     width: 100%;
 }
 
+.project-card .card-img-top {
+    width: 100%;
+    height: 200px; /* You can adjust this value as needed */
+    object-fit: cover;
+    object-position: center;
+}
