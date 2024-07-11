@@ -1,0 +1,113 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+
+
+/* Add these styles to your existing style.css file */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/efzo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-top: 80px; /* Add some top padding to account for the fixed navbar */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.hero p.lead {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.hero-image {
+    max-width: 400px;
+    border: 2px solid white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.562);
+}
+
+.hero .social-links {
+    margin-top: 1rem;
+}
+
+.hero .social-link {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.hero .social-link:hover {
+    transform: translateY(-5px);
+    color: #007bff;
+}
+
+
+@media (max-width: 991px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .hero-image {
+        margin-top: 2rem;
+        max-width: 250px;
+    }
+}
+
+section {
+    padding-top: 80px;
+}
+
+.skill-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.project-card {
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+#contact-form button {
+    width: 100%;
+}
+
