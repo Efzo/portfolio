@@ -1,0 +1,8 @@
+# Netlify redirects file
+# This ensures proper handling of form submissions and thank you page
+
+# Handle form submissions
+/contact /thank-you.html 200
+
+# Fallback for any 404s
+/* /index.html 200

@@ -428,11 +428,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            // Let Netlify handle the form submission
-            // Show success message after a brief delay
-            setTimeout(() => {
-                alert('Thank you for your message! I will get back to you soon at ojomoefosa@gmail.com');
-            }, 100);
+            // Let Netlify handle the form submission and redirect to thank you page
+            // The form will automatically redirect to /thank-you.html after successful submission
         });
     }
 });
