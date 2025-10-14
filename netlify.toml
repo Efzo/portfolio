@@ -1,0 +1,40 @@
+[build]
+  # Use Ubuntu 22.04 LTS (Jammy) build image
+  # This replaces the deprecated Focal (20.04) image
+  base = ""
+  publish = "."
+  command = ""
+
+[build.environment]
+  # Specify Node version for build environment
+  NODE_VERSION = "20"
+  # Use Ubuntu 22.04 Jammy build image (replaces deprecated Focal)
+  AWS_LAMBDA_JS_RUNTIME = "nodejs20.x"
+
+# Build image configuration
+[build.processing]
+  skip_processing = false
+
+# Set the build image to Ubuntu 22.04 (Jammy)
+[context.production]
+  
+[context.deploy-preview]
+
+[context.branch-deploy]
+
+# Force HTTPS redirect
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+  
+# Headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
