@@ -1,14 +1,18 @@
 [build]
-  # Use Ubuntu 22.04 LTS (Jammy) build image
+  # Use Ubuntu 24.04 LTS (Noble) build image
   # This replaces the deprecated Focal (20.04) image
   base = ""
   publish = "."
   command = ""
+  
+[build.image]
+  # Explicitly set build image to Ubuntu Noble 24.04
+  name = "ubuntu-noble-24.04"
 
 [build.environment]
   # Specify Node version for build environment (LTS version)
   NODE_VERSION = "22"
-  # Use Ubuntu 22.04 Jammy build image (replaces deprecated Focal)
+  # Use Ubuntu 24.04 Noble build image (replaces deprecated Focal)
   AWS_LAMBDA_JS_RUNTIME = "nodejs22.x"
 
 # Build image configuration
