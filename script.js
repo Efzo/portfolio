@@ -430,12 +430,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Netlify form submission handling
+    // Set current year in footer
+    const yearEl = document.getElementById('current-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Contact form submission via fetch (works with Netlify Forms in production)
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            // Let Netlify handle the form submission and redirect to thank you page
-            // The form will automatically redirect to /thank-you.html after successful submission
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('submit-btn');
+            const successDiv = document.getElementById('form-success');
+            const errorDiv = document.getElementById('form-error');
+
+            // Reset state
+            errorDiv.style.display = 'none';
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+
+            try {
+                const response = await fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(new FormData(contactForm)).toString()
+                });
+
+                if (response.ok) {
+                    contactForm.style.display = 'none';
+                    successDiv.style.display = 'block';
+                } else {
+                    throw new Error('Server returned ' + response.status);
+                }
+            } catch (err) {
+                errorDiv.style.display = 'block';
+                errorDiv.textContent = 'Something went wrong. Please email directly at ojomoefosa@gmail.com';
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
+            }
         });
     }
 });
