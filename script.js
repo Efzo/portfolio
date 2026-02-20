@@ -1,266 +1,272 @@
-// Cloud Architecture Projects
+// Cloud Architecture Projects — Based on Real Experience
 const projects = [
-    { 
-        id: 'multi-cloud-ecommerce',
-        title: 'Multi-Cloud E-commerce Platform', 
-        description: 'Designed and implemented a scalable e-commerce solution using AWS, Azure, and GCP with microservices architecture, containerization, and CI/CD pipelines. Achieved 99.9% uptime and 40% cost reduction.', 
+    {
+        id: 'enterprise-microservices-platform',
+        title: 'Enterprise Spring Boot Microservices Platform',
+        description: 'Principal architect for a Spring Boot 3.x microservices platform serving 500+ enterprise clients with 99.9% SLA and 1M+ daily transactions. Reduced deployment time by 87% (2 hours → 15 minutes) through Kubernetes-native CI/CD pipelines and Terraform IaC.',
         image: 'projects/images/tech2.jpg',
         link: '#',
-        technologies: ['AWS', 'Azure', 'Docker', 'Kubernetes', 'Terraform']
+        technologies: ['Spring Boot 3.x', 'Kubernetes', 'Jenkins', 'Terraform', 'PostgreSQL', 'Datadog']
     },
-    { 
-        id: 'serverless-analytics',
-        title: 'Serverless Data Analytics Pipeline', 
-        description: 'Built a real-time data processing pipeline using AWS Lambda, Kinesis, and Redshift. Handles 1M+ events daily with automated scaling and cost optimization strategies.', 
+    {
+        id: 'sap-erp-cloud-integration',
+        title: 'SAP ERP Multi-Cloud Integration',
+        description: 'Designed and delivered multi-cloud integration architecture connecting 15+ SAP ERP implementations to AWS and Azure cloud platforms, optimizing enterprise data workflows worth $10M+ annually for Fortune 500 clients.',
         image: 'projects/images/tech3.jpg',
         link: '#',
-        technologies: ['AWS Lambda', 'Kinesis', 'Redshift', 'Python', 'CloudFormation']
+        technologies: ['SAP ERP', 'AWS', 'Azure', 'API Gateway', 'Java', 'Spring Boot']
     },
-    { 
-        id: 'hybrid-migration',
-        title: 'Hybrid Cloud Migration Strategy', 
-        description: 'Led migration of legacy on-premises systems to cloud-native architecture. Implemented zero-downtime migration with disaster recovery and security best practices.', 
+    {
+        id: 'azure-microservices-platform',
+        title: 'Azure Cloud Microservices Platform',
+        description: 'Architected Python and Java microservices on Azure serving 100+ enterprise clients handling 5M+ daily requests at 99.95% availability. Increased throughput by 200% by refactoring monolith into event-driven microservices with Redis caching and intelligent load balancing.',
         image: 'projects/images/tech4.jpg',
         link: '#',
-        technologies: ['Azure', 'VMware', 'Terraform', 'Ansible', 'Azure DevOps']
+        technologies: ['Azure', 'Python', 'Java', 'Kubernetes AKS', 'Redis', 'GitLab CI']
     },
-    { 
-        id: 'microservices-platform',
-        title: 'Cloud-Native Microservices Platform', 
-        description: 'Architected a containerized microservices platform using Kubernetes on AWS EKS. Implemented service mesh, API gateway, and comprehensive monitoring solutions.', 
+    {
+        id: 'ai-powered-analytics-platform',
+        title: 'AI-Powered Analytics & API Platform',
+        description: 'Designed AI-powered microservices with FastAPI and ML integrations reducing manual processing by 85%. Built a secure RESTful API platform (JWT, OAuth2, RBAC) handling 1M+ daily requests with sub-second latency and 95% test coverage via pytest.',
         image: 'projects/images/tech5.jpg',
         link: '#',
-        technologies: ['Kubernetes', 'Istio', 'AWS EKS', 'Prometheus', 'Grafana']
+        technologies: ['Python', 'FastAPI', 'ML/AI', 'PostgreSQL', 'JWT/OAuth2', 'pytest']
     },
-    { 
-        id: 'ai-ml-infrastructure',
-        title: 'AI/ML Cloud Infrastructure', 
-        description: 'Designed ML infrastructure on Azure ML and AWS SageMaker for model training and deployment. Implemented MLOps pipelines with automated model versioning and A/B testing.', 
+    {
+        id: 'aws-serverless-reliability',
+        title: 'AWS Serverless & Reliability Engineering',
+        description: 'Designed serverless architecture patterns on AWS reducing infrastructure costs by 35% and processing time by 50%. Implemented CloudWatch custom metrics and Lambda-based anomaly detection, improving incident detection by 70% and enabling proactive SRE response.',
         image: 'projects/images/tech6.jpg',
         link: '#',
-        technologies: ['Azure ML', 'AWS SageMaker', 'MLflow', 'Kubeflow', 'Docker']
+        technologies: ['AWS Lambda', 'Step Functions', 'CloudWatch', 'Python', 'X-Ray', 'SRE']
     },
-    { 
-        id: 'disaster-recovery',
-        title: 'Disaster Recovery & Backup Solution', 
-        description: 'Implemented comprehensive DR strategy across multiple regions with automated failover, data replication, and compliance with SOC2 and GDPR requirements.', 
+    {
+        id: 'iot-energy-management',
+        title: 'IoT Energy Management Platform',
+        description: 'Architected an IoT data processing platform handling 50M+ daily sensor readings for enterprise energy management at 99.9% reliability. Reduced post-deployment defects by 50% and system downtime by 70% through zero-downtime CI/CD and comprehensive testing strategy.',
         image: 'projects/images/tech8.jpg',
         link: '#',
-        technologies: ['AWS', 'Azure', 'Veeam', 'Terraform', 'CloudWatch']
+        technologies: ['Python', 'PostgreSQL', 'PagerDuty', 'CI/CD', 'Batch Processing', 'IoT']
     }
 ];
 
-// Project Details Data
+// Project Details Data — Based on Real Experience
 const projectDetails = {
-    "multi-cloud-ecommerce": {
-        title: "Multi-Cloud E-commerce Platform",
+    "enterprise-microservices-platform": {
+        title: "Enterprise Spring Boot Microservices Platform",
         fullDescription: `
             <h4>Project Overview</h4>
-            <p>Led the design and implementation of a comprehensive multi-cloud e-commerce platform that serves over 100,000 daily active users. The platform was built using a microservices architecture deployed across AWS, Azure, and Google Cloud Platform to ensure high availability and optimal performance.</p>
-            
+            <p>Served as principal architect for a Spring Boot 3.x microservices platform at Vertex Inc, sustaining 99.9% SLA and processing 1M+ daily transactions for 500+ enterprise clients. Architected and delivered end-to-end Kubernetes-native CI/CD pipelines using Jenkins and Terraform IaC.</p>
+
             <h4>Key Achievements</h4>
             <ul>
-                <li><strong>99.9% Uptime:</strong> Achieved through multi-cloud redundancy and failover mechanisms</li>
-                <li><strong>40% Cost Reduction:</strong> Optimized cloud resource allocation and implemented auto-scaling</li>
-                <li><strong>50% Faster Load Times:</strong> Implemented CDN and caching strategies</li>
-                <li><strong>Zero Downtime Deployments:</strong> Blue-green deployment with automated rollback</li>
+                <li><strong>87% Deployment Time Reduction:</strong> From 2 hours to 15 minutes across 50+ microservices</li>
+                <li><strong>99.9% SLA Uptime:</strong> Sustained across 500+ enterprise clients</li>
+                <li><strong>40% Query Performance Improvement:</strong> PostgreSQL optimization across customer environments</li>
+                <li><strong>45% Fewer P1 Incidents:</strong> End-to-end observability framework with Datadog and automated alerting</li>
+                <li><strong>60% Reduction in CI/CD Failures:</strong> Across all customer environments</li>
+                <li><strong>2.3-Hour MTTR:</strong> For critical production issues</li>
             </ul>
-            
+
             <h4>Technical Architecture</h4>
             <ul>
-                <li><strong>Frontend:</strong> React.js with Next.js for SSR, deployed on Vercel</li>
-                <li><strong>Backend:</strong> Node.js microservices with Express.js</li>
-                <li><strong>Database:</strong> MongoDB Atlas (primary), Redis for caching</li>
-                <li><strong>Cloud Services:</strong> AWS EC2, Azure App Service, GCP Cloud Run</li>
-                <li><strong>Containerization:</strong> Docker containers orchestrated with Kubernetes</li>
-                <li><strong>CI/CD:</strong> GitHub Actions with automated testing and deployment</li>
-                <li><strong>Monitoring:</strong> Datadog, New Relic, and custom dashboards</li>
+                <li><strong>Backend:</strong> Spring Boot 3.x microservices (50+ services)</li>
+                <li><strong>Orchestration:</strong> Kubernetes with native CI/CD pipelines</li>
+                <li><strong>Infrastructure:</strong> Terraform IaC, Jenkins pipelines</li>
+                <li><strong>Database:</strong> PostgreSQL with performance optimization</li>
+                <li><strong>Observability:</strong> Datadog dashboards, automated alerting, distributed tracing</li>
+                <li><strong>ERP Integration:</strong> 15+ SAP systems connected to cloud platforms</li>
             </ul>
         `,
-        technologies: ["AWS", "Azure", "Docker", "Kubernetes", "Terraform", "React", "Node.js", "MongoDB", "Redis"],
-        duration: "8 months",
-        teamSize: "12 developers",
-        role: "Lead Cloud Solution Architect",
+        technologies: ["Spring Boot 3.x", "Kubernetes", "Jenkins", "Terraform", "PostgreSQL", "Datadog", "Java", "SAP ERP"],
+        duration: "Ongoing (Jun 2024–Present)",
+        teamSize: "Cross-functional enterprise teams",
+        role: "Principal Solution Architect — Vertex Inc",
         results: {
-            uptime: "99.9%",
-            costReduction: "40%",
-            performanceImprovement: "50%",
-            userSatisfaction: "95%"
+            deploymentSpeedup: "87% faster (2h → 15min)",
+            slaUptime: "99.9% across 500+ clients",
+            transactionsDaily: "1M+ daily",
+            p1IncidentReduction: "45% fewer P1 incidents"
         }
     },
-    "serverless-analytics": {
-        title: "Serverless Data Analytics Pipeline",
+    "sap-erp-cloud-integration": {
+        title: "SAP ERP Multi-Cloud Integration",
         fullDescription: `
             <h4>Project Overview</h4>
-            <p>Architected and implemented a real-time data analytics pipeline processing over 1 million events daily. The solution leverages AWS serverless technologies to provide cost-effective, scalable data processing with automated scaling and monitoring.</p>
-            
+            <p>Designed and delivered a multi-cloud integration architecture connecting 15+ SAP ERP implementations to AWS and Azure cloud platforms at Vertex Inc. Optimized enterprise data workflows worth $10M+ annually for Fortune 500 companies, with direct C-level stakeholder engagement to align technology investment with business growth.</p>
+
             <h4>Key Achievements</h4>
             <ul>
-                <li><strong>1M+ Events Daily:</strong> Processed with sub-second latency</li>
-                <li><strong>60% Cost Savings:</strong> Serverless architecture vs traditional infrastructure</li>
-                <li><strong>Real-time Processing:</strong> Data available for analysis within 30 seconds</li>
-                <li><strong>Auto-scaling:</strong> Handles traffic spikes without manual intervention</li>
+                <li><strong>15+ SAP ERP Integrations:</strong> Successfully architected and delivered end-to-end</li>
+                <li><strong>$10M+ Annual Workflows:</strong> Enterprise data pipelines optimized</li>
+                <li><strong>Fortune 500 Clients:</strong> Direct C-level engagement and architecture roadmaps</li>
+                <li><strong>Zero-Downtime Integrations:</strong> All SAP connections delivered without service interruption</li>
             </ul>
-            
+
             <h4>Technical Architecture</h4>
             <ul>
-                <li><strong>Data Ingestion:</strong> AWS Kinesis Data Streams for real-time data collection</li>
-                <li><strong>Processing:</strong> AWS Lambda functions for data transformation</li>
-                <li><strong>Storage:</strong> Amazon Redshift for data warehouse, S3 for raw data</li>
+                <li><strong>Integration Layer:</strong> API Gateway strategy across AWS and Azure</li>
+                <li><strong>ERP Systems:</strong> SAP ERP, Oracle ERP integration patterns</li>
+                <li><strong>Backend:</strong> Java / Spring Boot integration services</li>
+                <li><strong>Cloud:</strong> AWS (API Gateway, Lambda, S3) + Azure (App Service, Functions)</li>
+                <li><strong>Data Pipelines:</strong> ETL workflows optimizing $10M+ in annual data flows</li>
+                <li><strong>Security:</strong> Enterprise authentication, encryption, compliance controls</li>
+            </ul>
+        `,
+        technologies: ["SAP ERP", "AWS", "Azure", "API Gateway", "Java", "Spring Boot", "ETL Pipelines", "OAuth2"],
+        duration: "Ongoing (Jun 2024–Present)",
+        teamSize: "Cross-functional enterprise teams",
+        role: "Principal Solution Architect — Vertex Inc",
+        results: {
+            erpIntegrations: "15+ SAP implementations",
+            annualWorkflowValue: "$10M+ optimized",
+            enterpriseClients: "500+ Fortune 500 clients",
+            dataflowReliability: "99.9% uptime"
+        }
+    },
+    "azure-microservices-platform": {
+        title: "Azure Cloud Microservices Platform",
+        fullDescription: `
+            <h4>Project Overview</h4>
+            <p>Architected Python and Java microservices on Azure for a Microsoft client engagement at LTIMindtree, serving 100+ enterprise clients handling 5M+ daily requests with 99.95% system availability on Kubernetes. Delivered 8 major product releases increasing customer retention by 25%.</p>
+
+            <h4>Key Achievements</h4>
+            <ul>
+                <li><strong>200% Throughput Increase:</strong> Refactored monolith into event-driven microservices</li>
+                <li><strong>99.95% Availability:</strong> Sustained across 5M+ daily requests on AKS</li>
+                <li><strong>40% Performance Improvement:</strong> Redis caching, SQLAlchemy optimization, load balancing</li>
+                <li><strong>50% Reduction in Unplanned Downtime:</strong> Automated Python pipelines with GitLab CI</li>
+                <li><strong>25% Customer Retention Increase:</strong> Through 8 major releases and scalable architecture</li>
+                <li><strong>35% Reduction in Customer Escalations:</strong> Through mentorship and operational improvements</li>
+            </ul>
+
+            <h4>Technical Architecture</h4>
+            <ul>
+                <li><strong>Backend:</strong> Python (FastAPI, Django) + Java microservices</li>
+                <li><strong>Cloud Platform:</strong> Azure — AKS, App Service, Azure Functions</li>
+                <li><strong>Caching:</strong> Redis multi-layer caching strategy</li>
+                <li><strong>CI/CD:</strong> GitLab CI with security scanning and compliance validation</li>
+                <li><strong>Observability:</strong> Prometheus, CloudWatch integration</li>
+                <li><strong>Team:</strong> Led cross-functional team of 10 engineers across 3 time zones</li>
+            </ul>
+        `,
+        technologies: ["Azure AKS", "Python", "Java", "Redis", "GitLab CI", "Prometheus", "SQLAlchemy", "Kubernetes"],
+        duration: "Sep 2022 – Jun 2024",
+        teamSize: "10 engineers (3 time zones)",
+        role: "Solution Architect & Technical Product Specialist — LTIMindtree",
+        results: {
+            throughputIncrease: "200%",
+            systemAvailability: "99.95%",
+            performanceImprovement: "40%",
+            customerRetention: "+25%"
+        }
+    },
+    "ai-powered-analytics-platform": {
+        title: "AI-Powered Analytics & API Platform",
+        fullDescription: `
+            <h4>Project Overview</h4>
+            <p>Designed an AI-powered microservices architecture with FastAPI and ML integrations at Mind Machine, reducing manual processing by 85% and delivering real-time analytics for 50+ enterprise clients. Built a secure, scalable RESTful API platform handling 1M+ daily requests with sub-second latency.</p>
+
+            <h4>Key Achievements</h4>
+            <ul>
+                <li><strong>85% Reduction in Manual Processing:</strong> Through AI/ML microservices automation</li>
+                <li><strong>1M+ Daily Requests:</strong> Sub-second latency with comprehensive security (JWT, OAuth2, RBAC)</li>
+                <li><strong>99.2% Uptime:</strong> Improved from 95% through systematic architecture and monitoring</li>
+                <li><strong>95% Test Coverage:</strong> Pytest suites with mocking, fixtures, and CI automation</li>
+                <li><strong>40% Reduction in Production Bugs:</strong> Through rigorous code quality standards</li>
+            </ul>
+
+            <h4>Technical Architecture</h4>
+            <ul>
+                <li><strong>Backend:</strong> Python FastAPI with ML model integrations</li>
+                <li><strong>Security:</strong> JWT, OAuth2, RBAC, rate limiting</li>
+                <li><strong>Database:</strong> PostgreSQL with performance-driven design</li>
+                <li><strong>API Documentation:</strong> Comprehensive OpenAPI/Swagger docs</li>
+                <li><strong>Testing:</strong> pytest suites with 95% coverage, CI automation</li>
+                <li><strong>Monitoring:</strong> Custom analytics dashboards for real-time insights</li>
+            </ul>
+        `,
+        technologies: ["Python", "FastAPI", "ML/AI", "PostgreSQL", "JWT", "OAuth2", "RBAC", "pytest"],
+        duration: "Oct 2020 – Oct 2021",
+        teamSize: "Full-stack architecture team",
+        role: "Full Stack Architect & Product Owner — Mind Machine",
+        results: {
+            manualProcessingReduction: "85%",
+            dailyRequests: "1M+ with sub-second latency",
+            uptimeImprovement: "95% → 99.2%",
+            testCoverage: "95%"
+        }
+    },
+    "aws-serverless-reliability": {
+        title: "AWS Serverless & Reliability Engineering",
+        fullDescription: `
+            <h4>Project Overview</h4>
+            <p>Contributed to high-availability distributed systems architecture at Amazon, processing millions of daily transactions using Python Lambda, Step Functions, and AWS-native services. Designed serverless patterns reducing infrastructure costs by 35% and implemented CloudWatch anomaly detection improving incident response by 70%.</p>
+
+            <h4>Key Achievements</h4>
+            <ul>
+                <li><strong>35% Infrastructure Cost Reduction:</strong> Through intelligent serverless architecture</li>
+                <li><strong>50% Faster Processing Time:</strong> Through Step Functions orchestration</li>
+                <li><strong>70% Faster Incident Detection:</strong> CloudWatch custom metrics and Lambda-based anomaly detection</li>
+                <li><strong>SLO Framework:</strong> Established service level objectives for mission-critical applications</li>
+                <li><strong>Proactive SRE Response:</strong> Python-based reliability tooling for production systems</li>
+            </ul>
+
+            <h4>Technical Architecture</h4>
+            <ul>
+                <li><strong>Compute:</strong> AWS Lambda (Python) for serverless processing</li>
                 <li><strong>Orchestration:</strong> AWS Step Functions for workflow management</li>
-                <li><strong>Monitoring:</strong> CloudWatch, X-Ray for observability</li>
-                <li><strong>Security:</strong> IAM roles, VPC endpoints, encryption at rest and in transit</li>
+                <li><strong>Observability:</strong> CloudWatch custom metrics, X-Ray distributed tracing</li>
+                <li><strong>Reliability:</strong> SLO/SLI design, automated anomaly detection</li>
+                <li><strong>Scale:</strong> Millions of daily transactions, mission-critical availability</li>
+                <li><strong>SRE Tooling:</strong> Python-based reliability tooling and runbook automation</li>
             </ul>
         `,
-        technologies: ["AWS Lambda", "Kinesis", "Redshift", "Python", "CloudFormation", "Step Functions", "S3"],
-        duration: "6 months",
-        teamSize: "8 developers",
-        role: "Senior Cloud Architect",
+        technologies: ["AWS Lambda", "Step Functions", "CloudWatch", "Python", "X-Ray", "SRE", "SLOs/SLIs"],
+        duration: "May 2022 – Sep 2022",
+        teamSize: "SRE & distributed systems teams",
+        role: "Software Engineer & Cloud Architect — Amazon",
         results: {
-            eventsProcessed: "1M+ daily",
-            costSavings: "60%",
-            processingLatency: "<30 seconds",
-            uptime: "99.95%"
+            costReduction: "35%",
+            processingSpeedup: "50% faster",
+            incidentDetection: "70% faster",
+            systemScale: "Millions of daily transactions"
         }
     },
-    "hybrid-migration": {
-        title: "Hybrid Cloud Migration Strategy",
+    "iot-energy-management": {
+        title: "IoT Energy Management Platform",
         fullDescription: `
             <h4>Project Overview</h4>
-            <p>Led a comprehensive hybrid cloud migration strategy for a Fortune 500 company, migrating 50+ legacy applications from on-premises VMware infrastructure to Azure cloud while maintaining zero downtime and ensuring security compliance.</p>
-            
+            <p>Architected an IoT data processing platform with Python backend services at Smarter Grid International, handling 50M+ daily sensor readings for enterprise energy management at 99.9% reliability. Built scalable PostgreSQL-backed data pipelines and a Python-based alerting framework integrated with PagerDuty for 24/7 incident response.</p>
+
             <h4>Key Achievements</h4>
             <ul>
-                <li><strong>Zero Downtime Migration:</strong> All applications migrated without service interruption</li>
-                <li><strong>50+ Applications:</strong> Successfully migrated to Azure cloud</li>
-                <li><strong>30% Performance Improvement:</strong> Enhanced application performance post-migration</li>
-                <li><strong>Compliance:</strong> Maintained SOC2 and GDPR compliance throughout migration</li>
+                <li><strong>50M+ Daily Sensor Readings:</strong> Processed at enterprise scale with 99.9% reliability</li>
+                <li><strong>70% Reduction in System Downtime:</strong> Through zero-downtime CI/CD and testing strategy</li>
+                <li><strong>50% Reduction in Post-Deployment Defects:</strong> Through comprehensive testing and CI/CD design</li>
+                <li><strong>24/7 Incident Response:</strong> PagerDuty integration with automated runbook execution</li>
+                <li><strong>Enterprise-Scale Throughput:</strong> PostgreSQL batch processing designed from the ground up</li>
             </ul>
-            
+
             <h4>Technical Architecture</h4>
             <ul>
-                <li><strong>Assessment:</strong> Azure Migrate for discovery and assessment</li>
-                <li><strong>Migration Tools:</strong> Azure Site Recovery, Azure Migrate</li>
-                <li><strong>Infrastructure:</strong> Terraform for Infrastructure as Code</li>
-                <li><strong>Automation:</strong> Ansible playbooks for configuration management</li>
-                <li><strong>Monitoring:</strong> Azure Monitor, Log Analytics for observability</li>
-                <li><strong>Security:</strong> Azure Security Center, Azure AD integration</li>
+                <li><strong>Backend:</strong> Python services for IoT data ingestion and processing</li>
+                <li><strong>Database:</strong> PostgreSQL-backed data pipelines with batch processing</li>
+                <li><strong>Alerting:</strong> Python-based alerting framework integrated with PagerDuty</li>
+                <li><strong>CI/CD:</strong> Zero-downtime deployment pipeline with comprehensive test strategy</li>
+                <li><strong>Scale:</strong> 50M+ daily sensor readings, enterprise energy management</li>
+                <li><strong>Reliability:</strong> 99.9% uptime, automated runbooks, incident response automation</li>
             </ul>
         `,
-        technologies: ["Azure", "VMware", "Terraform", "Ansible", "Azure DevOps", "Azure Migrate", "Site Recovery"],
-        duration: "12 months",
-        teamSize: "15 developers",
-        role: "Lead Cloud Migration Architect",
+        technologies: ["Python", "PostgreSQL", "PagerDuty", "CI/CD", "Batch Processing", "IoT", "Alerting"],
+        duration: "Oct 2018 – Oct 2020",
+        teamSize: "Engineering reliability team",
+        role: "Software Engineer & Site Reliability Engineer — Smarter Grid International",
         results: {
-            applicationsMigrated: "50+",
-            downtime: "0 hours",
-            performanceImprovement: "30%",
-            complianceMaintained: "100%"
-        }
-    },
-    "microservices-platform": {
-        title: "Cloud-Native Microservices Platform",
-        fullDescription: `
-            <h4>Project Overview</h4>
-            <p>Designed and implemented a comprehensive cloud-native microservices platform on AWS EKS, serving as the foundation for multiple applications. The platform includes service mesh, API gateway, monitoring, and security features.</p>
-            
-            <h4>Key Achievements</h4>
-            <ul>
-                <li><strong>50+ Microservices:</strong> Successfully deployed and managed</li>
-                <li><strong>99.99% Uptime:</strong> High availability through multi-AZ deployment</li>
-                <li><strong>Auto-scaling:</strong> Horizontal Pod Autoscaler for dynamic scaling</li>
-                <li><strong>Service Mesh:</strong> Istio implementation for traffic management</li>
-            </ul>
-            
-            <h4>Technical Architecture</h4>
-            <ul>
-                <li><strong>Orchestration:</strong> Amazon EKS (Kubernetes) cluster</li>
-                <li><strong>Service Mesh:</strong> Istio for service-to-service communication</li>
-                <li><strong>API Gateway:</strong> Kong Gateway for external API management</li>
-                <li><strong>Monitoring:</strong> Prometheus, Grafana, Jaeger for observability</li>
-                <li><strong>Security:</strong> Pod Security Policies, Network Policies, RBAC</li>
-                <li><strong>CI/CD:</strong> GitLab CI/CD with ArgoCD for GitOps</li>
-            </ul>
-        `,
-        technologies: ["Kubernetes", "Istio", "AWS EKS", "Prometheus", "Grafana", "Kong", "ArgoCD", "Docker"],
-        duration: "10 months",
-        teamSize: "20 developers",
-        role: "Principal Cloud Architect",
-        results: {
-            microservices: "50+",
-            uptime: "99.99%",
-            scalingEfficiency: "85%",
-            deploymentFrequency: "Daily"
-        }
-    },
-    "ai-ml-infrastructure": {
-        title: "AI/ML Cloud Infrastructure",
-        fullDescription: `
-            <h4>Project Overview</h4>
-            <p>Architected a comprehensive AI/ML infrastructure supporting multiple machine learning teams across Azure ML and AWS SageMaker. The platform enables end-to-end ML workflows from data ingestion to model deployment and monitoring.</p>
-            
-            <h4>Key Achievements</h4>
-            <ul>
-                <li><strong>100+ ML Models:</strong> Successfully deployed and managed</li>
-                <li><strong>MLOps Pipeline:</strong> Automated model training, validation, and deployment</li>
-                <li><strong>A/B Testing:</strong> Automated model comparison and rollback capabilities</li>
-                <li><strong>Model Versioning:</strong> Complete model lifecycle management</li>
-            </ul>
-            
-            <h4>Technical Architecture</h4>
-            <ul>
-                <li><strong>ML Platforms:</strong> Azure ML, AWS SageMaker for model development</li>
-                <li><strong>Orchestration:</strong> Kubeflow for ML workflow management</li>
-                <li><strong>Model Registry:</strong> MLflow for model versioning and tracking</li>
-                <li><strong>Containerization:</strong> Docker containers for model serving</li>
-                <li><strong>Monitoring:</strong> Custom dashboards for model performance tracking</li>
-                <li><strong>Data Pipeline:</strong> Apache Airflow for data preprocessing workflows</li>
-            </ul>
-        `,
-        technologies: ["Azure ML", "AWS SageMaker", "MLflow", "Kubeflow", "Docker", "Apache Airflow", "Python", "TensorFlow"],
-        duration: "9 months",
-        teamSize: "12 developers",
-        role: "AI/ML Cloud Architect",
-        results: {
-            modelsDeployed: "100+",
-            mLOpsEfficiency: "90%",
-            modelAccuracy: "95%",
-            deploymentTime: "<2 hours"
-        }
-    },
-    "disaster-recovery": {
-        title: "Disaster Recovery & Backup Solution",
-        fullDescription: `
-            <h4>Project Overview</h4>
-            <p>Implemented a comprehensive disaster recovery and backup solution across multiple AWS and Azure regions, ensuring business continuity and compliance with SOC2 and GDPR requirements for a financial services company.</p>
-            
-            <h4>Key Achievements</h4>
-            <ul>
-                <li><strong>RTO < 4 Hours:</strong> Recovery Time Objective achieved</li>
-                <li><strong>RPO < 15 Minutes:</strong> Recovery Point Objective achieved</li>
-                <li><strong>Multi-Region:</strong> Active-active setup across 3 regions</li>
-                <li><strong>Compliance:</strong> SOC2 Type II and GDPR compliance maintained</li>
-            </ul>
-            
-            <h4>Technical Architecture</h4>
-            <ul>
-                <li><strong>Backup Strategy:</strong> Veeam Backup for AWS, Azure Backup</li>
-                <li><strong>Replication:</strong> Cross-region data replication</li>
-                <li><strong>Monitoring:</strong> CloudWatch, Azure Monitor for DR monitoring</li>
-                <li><strong>Automation:</strong> Terraform for infrastructure provisioning</li>
-                <li><strong>Testing:</strong> Automated DR testing every quarter</li>
-                <li><strong>Security:</strong> Encryption, access controls, audit logging</li>
-            </ul>
-        `,
-        technologies: ["AWS", "Azure", "Veeam", "Terraform", "CloudWatch", "Azure Monitor", "RDS", "S3"],
-        duration: "6 months",
-        teamSize: "10 developers",
-        role: "Senior Cloud Security Architect",
-        results: {
-            rto: "<4 hours",
-            rpo: "<15 minutes",
-            regions: "3",
-            complianceScore: "100%"
+            dailySensorReadings: "50M+",
+            systemReliability: "99.9% uptime",
+            downtimeReduction: "70%",
+            defectReduction: "50% post-deployment defects"
         }
     }
 };
