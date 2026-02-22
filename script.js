@@ -1,12 +1,20 @@
 // Cloud Architecture Projects — Based on Real Experience
 const projects = [
     {
+        id: 'data-clinch-ai-saas',
+        title: 'Data Clinch — AI SaaS Platform (Co-Founder & CTO)',
+        description: 'Co-founded and architecting a multi-tenant AI SaaS customer support platform for the enterprise data analytics market. Defining end-to-end product vision, infrastructure strategy, LLM integration, and go-to-market positioning to drive enterprise client acquisition.',
+        image: 'projects/images/tech7.jpg',
+        link: '#',
+        technologies: ['AI/LLM', 'OpenAI', 'LangChain', 'Multi-Tenant SaaS', 'AWS', 'Product Strategy']
+    },
+    {
         id: 'enterprise-microservices-platform',
-        title: 'Enterprise Spring Boot Microservices Platform',
-        description: 'Principal architect for a Spring Boot 3.x microservices platform serving 500+ enterprise clients with 99.9% SLA and 1M+ daily transactions. Reduced deployment time by 87% (2 hours → 15 minutes) through Kubernetes-native CI/CD pipelines and Terraform IaC.',
+        title: 'Enterprise Microservices Platform & AI Automation',
+        description: 'Principal solution architect at Vertex Inc — designed LLM-powered APIs (OpenAI + LangChain) cutting manual review by 85%, delivered 15+ SAP/ERP integrations optimizing $10M+ annual workflows, and reduced deployment time by 87% via Kubernetes-native CI/CD at 99.9% SLA for 500+ enterprise clients.',
         image: 'projects/images/tech2.jpg',
         link: '#',
-        technologies: ['Spring Boot 3.x', 'Kubernetes', 'Jenkins', 'Terraform', 'PostgreSQL', 'Datadog']
+        technologies: ['Spring Boot 3.x', 'OpenAI', 'LangChain', 'Kubernetes', 'Terraform', 'SAP ERP', 'Datadog']
     },
     {
         id: 'sap-erp-cloud-integration',
@@ -52,36 +60,70 @@ const projects = [
 
 // Project Details Data — Based on Real Experience
 const projectDetails = {
-    "enterprise-microservices-platform": {
-        title: "Enterprise Spring Boot Microservices Platform",
+    "data-clinch-ai-saas": {
+        title: "Data Clinch — AI SaaS Platform",
         fullDescription: `
             <h4>Project Overview</h4>
-            <p>Served as principal architect for a Spring Boot 3.x microservices platform at Vertex Inc, sustaining 99.9% SLA and processing 1M+ daily transactions for 500+ enterprise clients. Architected and delivered end-to-end Kubernetes-native CI/CD pipelines using Jenkins and Terraform IaC.</p>
+            <p>Co-founded Data Clinch, a multi-tenant AI SaaS customer support platform targeting the enterprise data analytics market. As CTO, I own end-to-end product vision, infrastructure architecture, AI model integration strategy, and go-to-market execution — alongside leading investor communication and fundraising narrative.</p>
+
+            <h4>Key Responsibilities & Achievements</h4>
+            <ul>
+                <li><strong>Product Vision & Roadmap:</strong> Defined full platform vision, technical roadmap, and feature prioritization aligned to enterprise data analytics market</li>
+                <li><strong>AI Model Integration:</strong> Architected LLM integration strategy balancing cost-performance trade-offs for scalability and competitive differentiation</li>
+                <li><strong>Go-to-Market:</strong> Established GTM strategy and platform positioning, driving enterprise client acquisition pipeline</li>
+                <li><strong>Investor Advisory:</strong> Translated distributed systems architecture into business value propositions to support fundraising and strategic partnerships</li>
+            </ul>
+
+            <h4>Technical Architecture</h4>
+            <ul>
+                <li><strong>AI Layer:</strong> OpenAI API, LangChain orchestration, multi-model strategy</li>
+                <li><strong>Platform:</strong> Multi-tenant SaaS architecture on AWS</li>
+                <li><strong>Infrastructure:</strong> Kubernetes, Terraform, event-driven microservices</li>
+                <li><strong>Product:</strong> End-to-end product ownership — discovery, roadmap, UX, delivery</li>
+            </ul>
+        `,
+        technologies: ["AI/LLM", "OpenAI", "LangChain", "Multi-Tenant SaaS", "AWS", "Kubernetes", "Terraform", "Product Strategy"],
+        duration: "Dec 2025 – Present",
+        teamSize: "Co-founding team",
+        role: "Co-Founder & CTO — Data Clinch",
+        results: {
+            platformType: "Multi-tenant AI SaaS",
+            market: "Enterprise data analytics",
+            aiIntegration: "LLM-powered customer support",
+            status: "Active — In market"
+        }
+    },
+    "enterprise-microservices-platform": {
+        title: "Enterprise Microservices Platform & AI Automation — Vertex Inc",
+        fullDescription: `
+            <h4>Project Overview</h4>
+            <p>Serving as principal solution architect at Vertex Inc, owning enterprise microservices architecture, AI product strategy, and SAP/ERP integration for 500+ enterprise clients processing 1M+ daily transactions at 99.9% SLA.</p>
 
             <h4>Key Achievements</h4>
             <ul>
-                <li><strong>87% Deployment Time Reduction:</strong> From 2 hours to 15 minutes across 50+ microservices</li>
+                <li><strong>85% Manual Review Reduction:</strong> Designed LLM-powered APIs using OpenAI and LangChain to automate compliance and reporting workflows</li>
+                <li><strong>87% Deployment Time Reduction:</strong> Kubernetes-native CI/CD — from 2 hours to 15 minutes across 50+ microservices</li>
                 <li><strong>99.9% SLA Uptime:</strong> Sustained across 500+ enterprise clients</li>
-                <li><strong>40% Query Performance Improvement:</strong> PostgreSQL optimization across customer environments</li>
-                <li><strong>45% Fewer P1 Incidents:</strong> End-to-end observability framework with Datadog and automated alerting</li>
-                <li><strong>60% Reduction in CI/CD Failures:</strong> Across all customer environments</li>
+                <li><strong>45% Fewer P1 Incidents:</strong> End-to-end observability with Datadog and automated alerting</li>
+                <li><strong>$10M+ Annual Workflows:</strong> Optimized through 15+ SAP/ERP ecosystem integrations</li>
                 <li><strong>2.3-Hour MTTR:</strong> For critical production issues</li>
             </ul>
 
             <h4>Technical Architecture</h4>
             <ul>
+                <li><strong>AI Layer:</strong> OpenAI API, LangChain orchestration for workflow automation</li>
                 <li><strong>Backend:</strong> Spring Boot 3.x microservices (50+ services)</li>
                 <li><strong>Orchestration:</strong> Kubernetes with native CI/CD pipelines</li>
                 <li><strong>Infrastructure:</strong> Terraform IaC, Jenkins pipelines</li>
                 <li><strong>Database:</strong> PostgreSQL with performance optimization</li>
                 <li><strong>Observability:</strong> Datadog dashboards, automated alerting, distributed tracing</li>
-                <li><strong>ERP Integration:</strong> 15+ SAP systems connected to cloud platforms</li>
+                <li><strong>ERP Integration:</strong> 15+ SAP/ERP systems connected to cloud platforms</li>
             </ul>
         `,
-        technologies: ["Spring Boot 3.x", "Kubernetes", "Jenkins", "Terraform", "PostgreSQL", "Datadog", "Java", "SAP ERP"],
+        technologies: ["Spring Boot 3.x", "Kubernetes", "OpenAI", "LangChain", "Terraform", "PostgreSQL", "Datadog", "SAP ERP"],
         duration: "Ongoing (Jun 2024–Present)",
         teamSize: "Cross-functional enterprise teams",
-        role: "Principal Solution Architect — Vertex Inc",
+        role: "Solution Architect & AI Product Owner — Vertex Inc",
         results: {
             deploymentSpeedup: "87% faster (2h → 15min)",
             slaUptime: "99.9% across 500+ clients",
@@ -434,7 +476,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const yearEl = document.getElementById('current-year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // Contact form submission via fetch (works with Netlify Forms in production)
+    // Contact form — Formspree (replace YOUR_FORMSPREE_ID with your ID from formspree.io)
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORMSPREE_ID';
+
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', async function(e) {
@@ -450,21 +494,26 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
 
             try {
-                const response = await fetch('/', {
+                const response = await fetch(FORMSPREE_ENDPOINT, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams(new FormData(contactForm)).toString()
+                    headers: { 'Accept': 'application/json' },
+                    body: new FormData(contactForm)
                 });
+
+                const data = await response.json();
 
                 if (response.ok) {
                     contactForm.style.display = 'none';
                     successDiv.style.display = 'block';
                 } else {
-                    throw new Error('Server returned ' + response.status);
+                    const msg = (data && data.errors)
+                        ? data.errors.map(e => e.message).join(', ')
+                        : 'Submission failed. Please email ojomoefosa@gmail.com directly.';
+                    throw new Error(msg);
                 }
             } catch (err) {
                 errorDiv.style.display = 'block';
-                errorDiv.textContent = 'Something went wrong. Please email directly at ojomoefosa@gmail.com';
+                errorDiv.textContent = err.message || 'Something went wrong. Please email ojomoefosa@gmail.com directly.';
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
             }
