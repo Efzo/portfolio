@@ -393,9 +393,9 @@ function createProjectModal() {
                     </div>
                     <div class="modal-footer" style="border-top: 1px solid rgba(0, 212, 255, 0.2);">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" onclick="window.open('https://www.linkedin.com/in/efosa-o-4882a015a/', '_blank')">
+                        <a href="https://www.linkedin.com/in/efosa-o-4882a015a/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                             <i class="fab fa-linkedin me-2"></i>Connect on LinkedIn
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -405,7 +405,54 @@ function createProjectModal() {
     document.body.insertAdjacentHTML('beforeend', modalHTML);
 }
 
+// ============================================================
+// THEME MANAGEMENT — Dark / Light / System
+// ============================================================
+const THEMES = ['dark', 'light', 'system'];
+const THEME_META = {
+    dark:   { icon: 'fa-moon',    label: 'Dark' },
+    light:  { icon: 'fa-sun',     label: 'Light' },
+    system: { icon: 'fa-desktop', label: 'System' }
+};
+
+function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function applyTheme(preference) {
+    const meta = THEME_META[preference] || THEME_META['dark'];
+    const effective = preference === 'system' ? getSystemTheme() : preference;
+    document.documentElement.setAttribute('data-theme', effective);
+
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+        const iconEl = btn.querySelector('i');
+        if (iconEl) iconEl.className = `fas ${meta.icon}`;
+        const labelEl = btn.querySelector('.theme-label');
+        if (labelEl) labelEl.textContent = meta.label;
+        btn.title = `Theme: ${meta.label} — click to cycle`;
+    }
+    try { localStorage.setItem('portfolio-theme', preference); } catch(e) {}
+}
+
+// Cycle to next theme on click
+function cycleTheme() {
+    const current = localStorage.getItem('portfolio-theme') || 'dark';
+    const next = THEMES[(THEMES.indexOf(current) + 1) % THEMES.length];
+    applyTheme(next);
+}
+
+// Re-apply when system preference changes (only matters when mode = 'system')
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if ((localStorage.getItem('portfolio-theme') || 'dark') === 'system') applyTheme('system');
+});
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Attach theme click listener first — before anything that could throw
+    document.getElementById('theme-toggle')?.addEventListener('click', cycleTheme);
+    // Apply saved theme (updates icon + label to match)
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+    applyTheme(savedTheme);
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

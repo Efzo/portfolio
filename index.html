@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <!-- Anti-flash: apply saved theme before first paint -->
+    <script>
+        (function(){var t=localStorage.getItem('portfolio-theme')||'dark';var e=t==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;document.documentElement.setAttribute('data-theme',e);})();
+    </script>
+
     <!-- Primary Meta Tags -->
     <title>Efosa Ezekiel Ojomo — Solution Architect | AI Product Owner | Cloud & Enterprise Architect</title>
     <meta name="title" content="Efosa Ezekiel Ojomo — Solution Architect | AI Product Owner | Cloud & Enterprise Architect">
@@ -131,6 +135,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">Efosa</a>
+            <button id="theme-toggle" class="theme-toggle-btn order-lg-last" onclick="cycleTheme()" title="Theme: Dark — click to cycle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+                <span class="theme-label">Dark</span>
+            </button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -196,149 +204,197 @@
             <h2 class="text-center mb-5">Work Experience</h2>
             <div class="timeline">
 
+                <!-- Data Clinch -->
                 <div class="timeline-item">
                     <div class="timeline-marker">
                         <div class="timeline-dot"></div>
                         <div class="timeline-line"></div>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-header">
+                        <div class="timeline-header" data-bs-toggle="collapse" data-bs-target="#exp-data-clinch" aria-expanded="false" aria-controls="exp-data-clinch" role="button">
                             <div>
                                 <h4 class="timeline-role">Co-Founder & CTO <span style="font-size:0.75rem; color: var(--secondary-color); font-weight:500;">(Part-Time)</span></h4>
                                 <div class="timeline-company"><i class="fas fa-rocket me-2"></i>Data Clinch · On-site</div>
                             </div>
-                            <span class="timeline-date">Dec 2025 — Present</span>
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="timeline-date">Dec 2025 — Present</span>
+                                <i class="fas fa-chevron-down timeline-toggle-icon"></i>
+                            </div>
                         </div>
-                        <ul>
-                            <li>Co-founding and architecting a multi-tenant AI SaaS customer support platform, defining end-to-end product vision, infrastructure strategy, and technical roadmap for the enterprise data analytics market.</li>
-                            <li>Directing AI model integration strategy—balancing cost-performance trade-offs to ensure platform scalability, extensibility, and competitive differentiation for enterprise clients.</li>
-                            <li>Leading investor communication and stakeholder engagement, translating distributed systems architecture into clear business value propositions to support fundraising and strategic partnerships.</li>
-                            <li>Established go-to-market strategy and platform positioning, driving enterprise client acquisition pipeline.</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>AI/LLM</span><span>SaaS</span><span>Multi-Tenant</span><span>Product Strategy</span><span>Go-to-Market</span><span>AWS</span>
+                        <div id="exp-data-clinch" class="collapse">
+                            <div class="timeline-collapse-body">
+                                <ul>
+                                    <li>Co-founding and architecting a multi-tenant AI SaaS customer support platform, defining end-to-end product vision, infrastructure strategy, and technical roadmap for the enterprise data analytics market.</li>
+                                    <li>Directing AI model integration strategy—balancing cost-performance trade-offs to ensure platform scalability, extensibility, and competitive differentiation for enterprise clients.</li>
+                                    <li>Leading investor communication and stakeholder engagement, translating distributed systems architecture into clear business value propositions to support fundraising and strategic partnerships.</li>
+                                    <li>Established go-to-market strategy and platform positioning, driving enterprise client acquisition pipeline.</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span>AI/LLM</span><span>SaaS</span><span>Multi-Tenant</span><span>Product Strategy</span><span>Go-to-Market</span><span>AWS</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Vertex Inc -->
                 <div class="timeline-item">
                     <div class="timeline-marker">
                         <div class="timeline-dot"></div>
                         <div class="timeline-line"></div>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-header">
+                        <div class="timeline-header" data-bs-toggle="collapse" data-bs-target="#exp-vertex" aria-expanded="false" aria-controls="exp-vertex" role="button">
                             <div>
                                 <h4 class="timeline-role">Solution Architect & AI Product Owner</h4>
                                 <div class="timeline-company"><i class="fas fa-building me-2"></i>Vertex Inc · Remote</div>
                             </div>
-                            <span class="timeline-date">Jun 2024 — Present</span>
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="timeline-date">Jun 2024 — Present</span>
+                                <i class="fas fa-chevron-down timeline-toggle-icon"></i>
+                            </div>
                         </div>
-                        <ul>
-                            <li>Serve as principal solution architect for an enterprise microservices platform supporting 500+ clients and 1M+ daily transactions at 99.9% SLA reliability.</li>
-                            <li>Designed LLM-powered APIs using OpenAI and LangChain to automate compliance and reporting workflows, cutting manual review time by 85% across enterprise clients.</li>
-                            <li>Delivered multi-cloud integration architecture connecting 15+ SAP/ERP ecosystems, optimizing enterprise data workflows valued at $10M+ annually.</li>
-                            <li>Led Kubernetes-native CI/CD transformation using Terraform and Jenkins, reducing deployment time by 87% (2 hours → 15 minutes) and cutting failure rates by 60%.</li>
-                            <li>Established end-to-end observability with Datadog, reducing P1 incidents by 45% and achieving 2.3-hour MTTR across distributed production systems.</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>Spring Boot 3.x</span><span>Kubernetes</span><span>LangChain</span><span>OpenAI</span><span>Terraform</span><span>SAP ERP</span><span>Datadog</span>
+                        <div id="exp-vertex" class="collapse">
+                            <div class="timeline-collapse-body">
+                                <ul>
+                                    <li>Serve as principal solution architect for an enterprise microservices platform supporting 500+ clients and 1M+ daily transactions at 99.9% SLA reliability.</li>
+                                    <li>Designed LLM-powered APIs using OpenAI and LangChain to automate compliance and reporting workflows, cutting manual review time by 85% across enterprise clients.</li>
+                                    <li>Delivered multi-cloud integration architecture connecting 15+ SAP/ERP ecosystems, optimizing enterprise data workflows valued at $10M+ annually.</li>
+                                    <li>Led Kubernetes-native CI/CD transformation using Terraform and Jenkins, reducing deployment time by 87% (2 hours → 15 minutes) and cutting failure rates by 60%.</li>
+                                    <li>Established end-to-end observability with Datadog, reducing P1 incidents by 45% and achieving 2.3-hour MTTR across distributed production systems.</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span>Spring Boot 3.x</span><span>Kubernetes</span><span>LangChain</span><span>OpenAI</span><span>Terraform</span><span>SAP ERP</span><span>Datadog</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Microsoft / LTIMindtree -->
                 <div class="timeline-item">
                     <div class="timeline-marker">
                         <div class="timeline-dot"></div>
                         <div class="timeline-line"></div>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-header">
+                        <div class="timeline-header" data-bs-toggle="collapse" data-bs-target="#exp-microsoft" aria-expanded="false" aria-controls="exp-microsoft" role="button">
                             <div>
                                 <h4 class="timeline-role">Solution Architect & Technical Product Specialist</h4>
                                 <div class="timeline-company"><i class="fas fa-building me-2"></i>Microsoft (via LTIMindtree) · Hybrid</div>
                             </div>
-                            <span class="timeline-date">Sep 2022 — Jun 2024</span>
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="timeline-date">Sep 2022 — Jun 2024</span>
+                                <i class="fas fa-chevron-down timeline-toggle-icon"></i>
+                            </div>
                         </div>
-                        <ul>
-                            <li>Architected Python and Java microservices on Azure serving 100+ enterprise clients handling 5M+ daily requests at 99.95% system availability on Kubernetes.</li>
-                            <li>Delivered 8 major product releases increasing customer retention by 25% through scalable architecture decisions and proactive stakeholder alignment.</li>
-                            <li>Increased system throughput by 200% by refactoring monolithic applications into event-driven microservices with Redis caching and intelligent load balancing.</li>
-                            <li>Led and mentored cross-functional team of 10 engineers across 3 time zones, reducing customer escalations by 35%.</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>Azure AKS</span><span>Python</span><span>Java</span><span>Redis</span><span>GitLab CI</span><span>Prometheus</span>
+                        <div id="exp-microsoft" class="collapse">
+                            <div class="timeline-collapse-body">
+                                <ul>
+                                    <li>Architected Python and Java microservices on Azure serving 100+ enterprise clients handling 5M+ daily requests at 99.95% system availability on Kubernetes.</li>
+                                    <li>Delivered 8 major product releases increasing customer retention by 25% through scalable architecture decisions and proactive stakeholder alignment.</li>
+                                    <li>Increased system throughput by 200% by refactoring monolithic applications into event-driven microservices with Redis caching and intelligent load balancing.</li>
+                                    <li>Led and mentored cross-functional team of 10 engineers across 3 time zones, reducing customer escalations by 35%.</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span>Azure AKS</span><span>Python</span><span>Java</span><span>Redis</span><span>GitLab CI</span><span>Prometheus</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Amazon -->
                 <div class="timeline-item">
                     <div class="timeline-marker">
                         <div class="timeline-dot"></div>
                         <div class="timeline-line"></div>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-header">
+                        <div class="timeline-header" data-bs-toggle="collapse" data-bs-target="#exp-amazon" aria-expanded="false" aria-controls="exp-amazon" role="button">
                             <div>
                                 <h4 class="timeline-role">Cloud Architect & Solution Engineer</h4>
                                 <div class="timeline-company"><i class="fas fa-building me-2"></i>Amazon · Hybrid</div>
                             </div>
-                            <span class="timeline-date">May 2022 — Sep 2022</span>
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="timeline-date">May 2022 — Sep 2022</span>
+                                <i class="fas fa-chevron-down timeline-toggle-icon"></i>
+                            </div>
                         </div>
-                        <ul>
-                            <li>Contributed to high-availability distributed systems processing millions of daily transactions using Python Lambda, Step Functions, and AWS-native services.</li>
-                            <li>Designed serverless architecture patterns reducing infrastructure costs by 35% and processing time by 50% through intelligent Step Functions orchestration.</li>
-                            <li>Implemented CloudWatch custom metrics and Lambda-based anomaly detection, improving incident detection time by 70%.</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>AWS Lambda</span><span>Step Functions</span><span>Python</span><span>CloudWatch</span><span>SRE</span>
+                        <div id="exp-amazon" class="collapse">
+                            <div class="timeline-collapse-body">
+                                <ul>
+                                    <li>Contributed to high-availability distributed systems processing millions of daily transactions using Python Lambda, Step Functions, and AWS-native services.</li>
+                                    <li>Designed serverless architecture patterns reducing infrastructure costs by 35% and processing time by 50% through intelligent Step Functions orchestration.</li>
+                                    <li>Implemented CloudWatch custom metrics and Lambda-based anomaly detection, improving incident detection time by 70%.</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span>AWS Lambda</span><span>Step Functions</span><span>Python</span><span>CloudWatch</span><span>SRE</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Mind Machine -->
                 <div class="timeline-item">
                     <div class="timeline-marker">
                         <div class="timeline-dot"></div>
                         <div class="timeline-line"></div>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-header">
+                        <div class="timeline-header" data-bs-toggle="collapse" data-bs-target="#exp-mind-machine" aria-expanded="false" aria-controls="exp-mind-machine" role="button">
                             <div>
                                 <h4 class="timeline-role">AI Solution Architect & Product Owner</h4>
                                 <div class="timeline-company"><i class="fas fa-building me-2"></i>Mind Machine · Remote</div>
                             </div>
-                            <span class="timeline-date">Oct 2020 — Oct 2021</span>
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="timeline-date">Oct 2020 — Oct 2021</span>
+                                <i class="fas fa-chevron-down timeline-toggle-icon"></i>
+                            </div>
                         </div>
-                        <ul>
-                            <li>Designed AI-powered microservices with FastAPI and ML integrations, reducing manual processing by 85% for 50+ enterprise clients.</li>
-                            <li>Built secure RESTful API platform (JWT, OAuth2, RBAC, rate limiting) handling 1M+ daily requests with sub-second latency.</li>
-                            <li>Achieved 99.2% uptime (up from 95%) and established 95% test coverage via pytest suites with CI automation.</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>FastAPI</span><span>Python</span><span>ML/AI</span><span>PostgreSQL</span><span>JWT/OAuth2</span>
+                        <div id="exp-mind-machine" class="collapse">
+                            <div class="timeline-collapse-body">
+                                <ul>
+                                    <li>Designed AI-powered microservices with FastAPI and ML integrations, reducing manual processing by 85% for 50+ enterprise clients.</li>
+                                    <li>Built secure RESTful API platform (JWT, OAuth2, RBAC, rate limiting) handling 1M+ daily requests with sub-second latency.</li>
+                                    <li>Achieved 99.2% uptime (up from 95%) and established 95% test coverage via pytest suites with CI automation.</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span>FastAPI</span><span>Python</span><span>ML/AI</span><span>PostgreSQL</span><span>JWT/OAuth2</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Smarter Grid -->
                 <div class="timeline-item">
                     <div class="timeline-marker">
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-header">
+                        <div class="timeline-header" data-bs-toggle="collapse" data-bs-target="#exp-smarter-grid" aria-expanded="false" aria-controls="exp-smarter-grid" role="button">
                             <div>
                                 <h4 class="timeline-role">Cloud Architect & Site Reliability Engineer</h4>
                                 <div class="timeline-company"><i class="fas fa-building me-2"></i>Smarter Grid International · Remote</div>
                             </div>
-                            <span class="timeline-date">Oct 2018 — Oct 2020</span>
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="timeline-date">Oct 2018 — Oct 2020</span>
+                                <i class="fas fa-chevron-down timeline-toggle-icon"></i>
+                            </div>
                         </div>
-                        <ul>
-                            <li>Architected IoT data processing platform handling 50M+ daily sensor readings for enterprise energy management at 99.9% reliability.</li>
-                            <li>Built scalable PostgreSQL-backed data pipelines and Python-based alerting framework integrated with PagerDuty for 24/7 incident response.</li>
-                            <li>Reduced post-deployment defects by 50% and system downtime by 70% through zero-downtime CI/CD and comprehensive testing strategy.</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>Python</span><span>PostgreSQL</span><span>PagerDuty</span><span>CI/CD</span><span>IoT</span>
+                        <div id="exp-smarter-grid" class="collapse">
+                            <div class="timeline-collapse-body">
+                                <ul>
+                                    <li>Architected IoT data processing platform handling 50M+ daily sensor readings for enterprise energy management at 99.9% reliability.</li>
+                                    <li>Built scalable PostgreSQL-backed data pipelines and Python-based alerting framework integrated with PagerDuty for 24/7 incident response.</li>
+                                    <li>Reduced post-deployment defects by 50% and system downtime by 70% through zero-downtime CI/CD and comprehensive testing strategy.</li>
+                                </ul>
+                                <div class="timeline-tags">
+                                    <span>Python</span><span>PostgreSQL</span><span>PagerDuty</span><span>CI/CD</span><span>IoT</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
