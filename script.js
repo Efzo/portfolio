@@ -393,7 +393,7 @@ function createProjectModal() {
                     </div>
                     <div class="modal-footer" style="border-top: 1px solid rgba(0, 212, 255, 0.2);">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" onclick="window.open('https://www.linkedin.com/in/efosa-ojomo-4882a015a/', '_blank')">
+                        <button type="button" class="btn btn-primary" onclick="window.open('https://www.linkedin.com/in/efosa-o-4882a015a/', '_blank')">
                             <i class="fab fa-linkedin me-2"></i>Connect on LinkedIn
                         </button>
                     </div>
