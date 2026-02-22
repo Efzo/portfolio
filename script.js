@@ -477,7 +477,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
     // Contact form — Formspree (replace YOUR_FORMSPREE_ID with your ID from formspree.io)
-    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORMSPREE_ID';
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mjgeaaod';
 
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
