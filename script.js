@@ -369,7 +369,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const contactForm = document.getElementById("contact-form");
     if (contactForm) {
-        contactForm.addEventListener("submit", function() {
+        contactForm.addEventListener("submit", function(e) {
+            const isLocalPreview = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+            if (isLocalPreview) {
+                e.preventDefault();
+                window.location.href = "thank-you.html";
+                return;
+            }
             return true;
         });
     }
